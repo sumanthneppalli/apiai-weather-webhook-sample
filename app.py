@@ -31,7 +31,7 @@ def webhook():
 def processRequest(req):
     if req.get("result").get("action") != "yahooWeatherForecast":
         return {}
-    baseurl = "https://www.quandl.com/api/v3/datasets/WIKI/FB.json?api_key=yghN7Qe-MTpHT5ZWCpV-"
+    baseurl = "https://www.tastekid.com/api/similar?q=humsafar&k=257475-MovieRec-2525O9YA-"
     result = urllib.urlopen(baseurl).read()
     data = json.loads(result)
     res = makeWebhookResult(data)
@@ -39,11 +39,14 @@ def processRequest(req):
 
 
 def makeWebhookResult(data):
-    query = data.get('dataset')
+    query1 = data.get('Similar')
     if query is None:
         return {}
 
-    result = query.get('dataset_code')
+    query2 = query1.get('Info')
+    if result is None:
+        return {}
+    result = query2.get('Type')
     if result is None:
         return {}
 
