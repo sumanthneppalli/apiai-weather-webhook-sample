@@ -34,22 +34,22 @@ def processRequest(req):
     baseurl = "https://www.tastekid.com/api/similar?q=humsafar&k=257475-MovieRec-2525O9YA"
     result = urllib.urlopen(baseurl).read()
     data = json.loads(result)
-    res = makeWebhookResult(data)
+   res = makeWebhookResult(data)
     return res
 
 
 def makeWebhookResult(data):
-    query = data.get('similar')
-    if query is None:
-        return {}
+   # query = data.get('similar')
+    #if query is None:
+     #   return {}
 
-    query1 = query.get('info')
-    if query1 is None:
-        return {}
+    #query1 = query.get('info')
+    #if query1 is None:
+     # return {}
 
-    result = query1.get('name')
-    if result is None:
-        return {}
+#    result = query1.get('name')
+   # if result is None:
+    #    return {}
   
 
     # print(json.dumps(item, indent=4))
