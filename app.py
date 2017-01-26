@@ -29,7 +29,7 @@ def webhook():
 
 
 def processRequest(req):
-    if req.get("result").get("action") != "yahooWeatherForecast":
+    if req.get("result").get("action") != "tastekid":
         return {}
     baseurl = "https://www.tastekid.com/api/similar?q=humsafar&k=257475-MovieRec-2525O9YA"
     result = urllib.urlopen(baseurl).read()
@@ -54,7 +54,7 @@ def makeWebhookResult(data):
 
     # print(json.dumps(item, indent=4))
 
-    speech = what
+    speech = result
 
     print("Response:")
     print(speech)
