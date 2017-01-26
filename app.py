@@ -43,7 +43,7 @@ def makeWebhookResult(data):
     if query is None:
         return {}
 
-    query1 = query.get('name')
+    query1 = query.get('info')
     if query1 is None:
         return {}
 
