@@ -43,10 +43,13 @@ def makeWebhookResult(data):
     if query is None:
         return {}
 
-    result = query.get('name')
-    if result is None:
+    query1 = query.get('name')
+    if query1 is None:
         return {}
 
+    result = query1.get('name')
+    if result is None:
+        return {}
   
 
     # print(json.dumps(item, indent=4))
