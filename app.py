@@ -54,7 +54,7 @@ def makeWebhookResult(data):
 
     # print(json.dumps(item, indent=4))
 
-    speech = result
+    speech = what
 
     print("Response:")
     print(speech)
