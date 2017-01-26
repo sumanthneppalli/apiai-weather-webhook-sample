@@ -33,8 +33,8 @@ def processRequest(req):
         return {}
     baseurl = "https://www.tastekid.com/api/similar?q=humsafar&k=257475-MovieRec-2525O9YA"
     result = urllib.urlopen(baseurl).read()
-    data = json.loads(result)
-   res = makeWebhookResult(data)
+    #data = json.loads(result)
+    res = makeWebhookResult(data)
     return res
 
 
